@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CHECKOUT</title>
+    <link rel="stylesheet" href="project.css" type="text/css">
+    <style media="screen">
+      .one{
+        text-decoration: underline;
+
+      }
+      .total{
+        color: red;
+
+      }
+      fieldset{
+        background-color: #c0c25a;
+        color: white;
+        font-size: 2em;
+        border-radius:10px;
+
+      }
+      span{
+        color: #2f5f73;
+      }
+      legend{
+        background-color:#c0c25a;
+        border: solid #2f5f73;
+        border-radius: 10px;
+        padding:5px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Welcome to the checkout</h1> -->
+
+    <fieldset>
+      <legend>CHECKOUT</legend>
+    <form class="form1" action="index.html" method="post">
+
+      <p class="one"><b>Items in your bag: </b></p>
+
+      <p>You selected the items are : <br> <span id="name1"></span> <br> <span id="name2"></span> <br>  <span id="name3"></span> </p>
+
+      <p class="total"><b>The prices are: <br><span id="price1"></span><br> <span id="price2"></span> <br> <span id="price3"></span> </b></p>
+
+
+    </form>
+
+</fieldset>
+
+<script type="text/javascript">
+
+  document.querySelector('#name1').innerHTML=localStorage.getItem('Name1');
+  document.querySelector('#price1').innerHTML=localStorage.getItem('Price1');
+
+  document.querySelector('#name2').innerHTML=localStorage.getItem('Name2');
+  document.querySelector('#price2').innerHTML=localStorage.getItem('Price2');
+
+  document.querySelector('#name3').innerHTML=localStorage.getItem('Name3');
+  document.querySelector('#price3').innerHTML=localStorage.getItem('Price3');
+
+
+</script>
+  </body>
+</html>
